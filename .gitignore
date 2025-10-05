@@ -11,6 +11,7 @@ venv/
 # Data and Indices
 faiss_index/
 corpus/
+persistent_corpus/
 outputs/
 sandbox/
 
