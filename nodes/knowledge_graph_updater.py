@@ -17,7 +17,7 @@ def knowledge_graph_updater_node(state: Dict[str, Any]) -> Dict[str, Any]:
     From the research document text below, extract key entities and their relationships.
     Extract entity types: 'concept', 'method', 'metric'.
     Format the output as a valid JSON list of objects. Each object must have 'source_entity', 'relation', and 'target_entity' keys.
-    Example: [{"source_entity": "BERT", "relation": "uses", "target_entity": "attention mechanism"}]
+    Example: [{{"source_entity": "BERT", "relation": "uses", "target_entity": "attention mechanism"}}]
 
     Document text:
     ---
@@ -28,6 +28,7 @@ def knowledge_graph_updater_node(state: Dict[str, Any]) -> Dict[str, Any]:
 
     all_relations = []
     for doc in documents:
+        # The .format call will now correctly ignore the escaped braces in the example
         prompt = prompt_template.format(document_text=doc)
         try:
             response_text = query_huggingface_api(prompt)
