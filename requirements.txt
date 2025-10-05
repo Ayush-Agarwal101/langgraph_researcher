@@ -1,0 +1,21 @@
+# FILE: requirements.txt
+
+# Core LangChain and LangGraph libraries
+langchain
+langgraph
+langchain-community
+langchain-huggingface
+
+# For interacting with Hugging Face APIs and local models
+requests
+sentence-transformers
+torch
+
+# For data handling and storage
+pypdf
+faiss-cpu
+pymongo
+
+# For environment variables and containerization
+python-dotenv
+docker

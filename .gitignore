@@ -1,0 +1,19 @@
+# FILE: .gitignore
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Environment variables
+.env
+
+# Data and Indices
+faiss_index/
+corpus/
+outputs/
+sandbox/
+
+# IDE specific
+.vscode/
+.idea/
